@@ -4,6 +4,15 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    supported_locales: [ 'es-ES', 'fr-FR', 'it-IT']
+    default_locale: 'es-ES'
+    connection_timeout: 5
+    cities_priority: '0.7'
+    activities_priority: '0.5'
+    changefreq: 'weekly'
+    sitemap_prefix: 'google_sitemap'
+    email_from: 'no-reply@musement.com'
+    default_directory: './'
 
 services:
     # default configuration for services in *this* file
