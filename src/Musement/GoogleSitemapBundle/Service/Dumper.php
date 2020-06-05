@@ -115,7 +115,7 @@ class Dumper
         }
     
         $name = 'test';
-        $message = (new \Swift_Message('Sitemap ' . $this->getFileName($locale)))
+        $message = (new \Swift_Message('MUSEMENT.COM sitemap for ' . $this->getFileName($locale)))
         ->setFrom($this->params->get('email_from'))
         ->setTo($recipients)
         ->setBody(

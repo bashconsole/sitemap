@@ -95,11 +95,10 @@ class GoogleSitemapCommand extends Command
         $targetDir = $this->params->get('default_directory');
         if ($input->getOption('dir')) {
             $targetDir = $input->getOption('dir');
-            $filename = $this->dumper->save($targetDir, $localeArg, $text);
-            $output->writeln("Sitemap has been successfuly saved to " . $filename);
-            return 0;
         }
-        
+
+        $filename = $this->dumper->save($targetDir, $localeArg, $text);
+        $output->writeln("Sitemap has been successfuly saved to " . $filename);
 
         return 0;
     }
