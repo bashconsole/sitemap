@@ -33,8 +33,8 @@ class Generator
         $this->logger = $logger;
         $this->params = $params;
 
-        $this->citiesEndpoint = 'https://api.musement.com/api/v3/cities?limit=%d';
-        $this->activitiesEndpoint = 'https://api.musement.com/api/v3/cities/%d/activities?limit=%d';
+        $this->citiesEndpoint = $this->params->get('cities_endpoint');
+        $this->activitiesEndpoint = $this->params->get('activities_endpoint');
         $this->timeout = $this->params->get('connection_timeout');
         $this->client  = HttpClient::create();
         $this->headers = ['User-Agent' => 'Musement Sitemap Service',  'accept' => 'application/json' ];
