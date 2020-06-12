@@ -13,6 +13,8 @@ parameters:
     sitemap_prefix: 'google_sitemap'
     email_from: 'no-reply@musement.com'
     default_directory: './'
+    cities_endpoint: 'https://api.musement.com/api/v3/cities?limit=%d'
+    activities_endpoint: 'https://api.musement.com/api/v3/cities/%d/activities?limit=%d'
 
 services:
     # default configuration for services in *this* file
